@@ -1,5 +1,5 @@
 {{- if .Get 1 -}}
-    <h6 class="title is-6" id="{{ .Get 1 }}">{{ .Get 0 }}</h6>
+    <h6 class="tag title is-6 is-light" id="{{ .Get 1 }}">{{ .Get 0 }}</h6>
 {{- else -}}
-    <h6 class="title is-6">{{ .Get 0 }}</h6>
+    <h6 class="tag title is-6 is-light">{{ .Get 0 }}</h6>
 {{- end -}}
