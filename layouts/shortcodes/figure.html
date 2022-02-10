@@ -6,18 +6,18 @@
 {{- $alt      := printf "%s" (.Get "alt") -}}
 {{- with $original -}}
 {{- $image := .Resize $size -}}
-<div class="columns is-centered container">
+<div class="is-right container">
     <div class="column is-full">
         <figure>
             {{- if $caption -}}
                 <img class="rounded-corners" src="{{- $image.RelPermalink -}}" 
-                    width="{{- $image.Width -}}" height="{{- $image.Height -}}" alt="{{- $alt -}}" >
+                    width="{{- $image.Width -}}" height="{{- $image.Height -}}" alt="{{- $alt -}}">
             {{- else -}}
                 <img class="rounded-corners" src="{{- $image.RelPermalink -}}" 
-                width="{{- $image.Width -}}" height="{{- $image.Height -}}" >
+                width="{{- $image.Width -}}" height="{{- $image.Height -}}" align="right" float="right" style="padding: 30px;">
             {{- end -}}
             {{- if $caption -}}
-                <figcaption>{{- $caption -}}</figcaption>
+                <p align="left">{{- $caption -}}</p>
             {{- end -}}
         </figure>
     </div>
